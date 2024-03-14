@@ -11,7 +11,6 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    
   </head>
   <body>
     <div class="container">
@@ -20,13 +19,21 @@
         <a href="{% url 'register' %}">Register</a>
         {% if user.is_authenticated %}
         <a href="{% url 'user_logout' %}">Logout</a>
+        <a href="{% url 'curriculum:standard_list' %}">Grades</a> 
         {% else %}
         You are currently using guest access 
         <a href="{% url 'user_login' %}">(Log in)</a>
         {% endif %}
-        <a href="{% url 'admin:index' %}">Admin</a>
-        <a href="{% url 'curriculum:standard_list' %}">Grades</a>
+        <a href="{% url 'admin:index' %}" target="_blank">Admin</a>
+        {% if request.user.is_authenticated %}
+        <div>
+        <p>Welcome to EducateLanka, <b>{{request.user}}</b></p>
+        </div>
         <h1>EducateLanka Homepage</h1>
+        {% else %}
+        <h1>EducateLanka Homepage</h1>
+        <!-- Show HTML content to other users here -->
+        {% endif %}
         {% block content %} {% endblock %}
       </div>
     </div>
