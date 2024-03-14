@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% csrf_token %}
+<h2>Are you sure you want to delete?</h2>
+
+<form method="post">
+    <input type="submit" name="" value="Delete">
+    <a href="{% url 'curriculum:lesson_detail' standard=lessons.Standard.slug subject=lessons.subject.slug slug=lessons.slug %}" class="btn btn-warning btn-block">Cancel Deletion</a>
+</form>
+ 
+{% endblock %}
