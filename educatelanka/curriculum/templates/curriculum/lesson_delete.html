@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% csrf_token %}
-<h2>Are you sure you want to delete?</h2>
+
+{% if request.user.is_authenticated %}
+{% if request.user.is_staff %}
+<div>
+    <h2>Are you sure you want to delete?</h2>
 
 <form method="post">
+    {% csrf_token %} 
     <input type="submit" name="" value="Delete">
     <a href="{% url 'curriculum:lesson_detail' standard=lessons.Standard.slug subject=lessons.subject.slug slug=lessons.slug %}" class="btn btn-warning btn-block">Cancel Deletion</a>
 </form>
+</div>
+{% else %}
+<h1>You're not allowed to access this!</h1>
+<!-- Show HTML content to other users here -->
+{% endif %}
+{% endif %}
  
 {% endblock %}

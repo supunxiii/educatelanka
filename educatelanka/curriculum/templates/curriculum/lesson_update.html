@@ -2,11 +2,20 @@
 
 {% block content %}
 
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" name="" value="Update Lesson">
-    <a href="{% url 'curriculum:lesson_detail' standard=lessons.Standard.slug subject=lessons.subject.slug slug=lessons.slug %}" >Cancel Update</a>
-</form>
- 
+{% if request.user.is_authenticated %}
+{% if request.user.is_staff %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" name="" value="Update Lesson">
+        <a href="{% url 'curriculum:lesson_detail' standard=lessons.Standard.slug subject=lessons.subject.slug slug=lessons.slug %}" >Cancel Update</a>
+    </form>
+</div>
+{% else %}
+<h1>You're not allowed to access this!</h1>
+<!-- Show HTML content to other users here -->
+{% endif %}
+{% endif %}
 {% endblock %}
+

@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" name="" value="Create Lesson">
-</form>
-
+{% if request.user.is_authenticated %}
+{% if request.user.is_staff %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" name="" value="Create Lesson">
+    </form>
+</div>
+{% else %}
+<h1>You're not allowed to access this!</h1>
+<!-- Show HTML content to other users here -->
+{% endif %}
+{% endif %}
 {% endblock %}
