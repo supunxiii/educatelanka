@@ -7,8 +7,8 @@ EducateLanka is an online Learning Management System (LMS) developed for the COM
 ![Django 4.2.3](https://img.shields.io/badge/Django-4.2.3-092E20?style=flat-square&logo=django&logoColor=white)
 ![Bootstrap 4.5.2](https://img.shields.io/badge/Bootstrap-4.5.2-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
 ![SQLite 3.45.3](https://img.shields.io/badge/SQLite-3.45.3-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-Markup-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-Styles-1572B6?style=flat-square&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
 ## Features
 
@@ -201,4 +201,5 @@ For any enquiries or feedback, please contact the developer:
 ---
 
 _Designed and developed in October 2023_
+
 
