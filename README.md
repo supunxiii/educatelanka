@@ -193,7 +193,7 @@ This project is open-source and is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any inquiries or feedback, please contact the development team:
+For any enquiries or feedback, please contact the developer:
 
 - **Supun Wijesooriya**: [GitHub Profile](https://github.com/supunxiii)
 - **Project Repository**: [educatelanka](https://github.com/supunxiii/educatelanka)
@@ -201,3 +201,4 @@ For any inquiries or feedback, please contact the development team:
 ---
 
 _Designed and developed in October 2023_
+
